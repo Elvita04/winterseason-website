@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('winter-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: #fff; /* Keep white color for the main header and footer headings */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Subtle shadow for better visibility */
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1abc9c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Snow Effect */
+@keyframes snowflakes {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 24px;
+    z-index: 9999;
+    user-select: none;
+    animation: snowflakes linear infinite;
+    opacity: 0.9; /* Slight transparency for a soft effect */
+}
+
+/* Variations in snowflake speeds and starting points */
+.snowflake:nth-child(odd) {
+    animation-duration: 10s;
+}
+
+.snowflake:nth-child(even) {
+    animation-duration: 12s;
+    animation-delay: -5s;
+}
+
+.snowflake:nth-child(3n) {
+    animation-duration: 14s;
+    animation-delay: -2s;
+}
+
+/* Header Styles */
+#main-header {
+    background: #0D2C54; /* Deep Winter Blue for the header background */
+    color: #ecf0f1; /* Light Blue text for the header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#main-header .header-content h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#main-nav ul li {
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+#main-nav ul li a {
+    transition: color 0.3s ease;
+}
+
+#main-nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Section Styles */
+.section {
+    margin: 50px 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.section h2 {
+    color: #0D2C54; /* Deep Winter Blue for section headings */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Celebration Article Styles */
+.celebration {
+    margin-bottom: 30px;
+}
+
+.celebration h3 {
+    color: #0D2C54; /* Deep Winter Blue for celebration headings */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.celebration p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.celebration-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Footer Styles */
+#main-footer {
+    background: #0D2C54; /* Deep Winter Blue for footer background */
+    color: #ecf0f1; /* Light Blue text for the footer */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer-nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-nav ul li {
+    margin: 0 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer-nav ul {
+        flex-direction: column;
+    }
+}
